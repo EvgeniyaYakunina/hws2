@@ -1,15 +1,30 @@
 .radio {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 24px;
 }
 
 .radio::before {
+    width: 24px;
+    height: 24px;
 }
 
-
 .radio:checked::before {
+    width: 20px;
+    height: 20px;
+    color: black;
 }
 
 .label {
+    display: flex;
+    width: 400px;
+    height: 20px;
+    margin: 10px;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
 }
