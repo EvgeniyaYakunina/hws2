@@ -58,6 +58,7 @@ const HW15 = () => {
                     setTotalCount(res.data.totalCount)
                 }
                 //
+                setLoading(false)
             })
     }
 
