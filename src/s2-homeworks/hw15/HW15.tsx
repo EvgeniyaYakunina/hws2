@@ -56,9 +56,9 @@ const HW15 = () => {
                     setTechs(res.data.techs)
                     // сохранить пришедшие данные
                     setTotalCount(res.data.totalCount)
+                    setLoading(false)
                 }
                 //
-                setLoading(false)
             })
     }
 
@@ -71,9 +71,9 @@ const HW15 = () => {
         setCount(newCount)
 
         // sendQuery(
-        sendQuery({ ...searchParams, page: newPage, count: newCount })
+        sendQuery({page: newPage, count: newCount })
         // setSearchParams(
-        setSearchParams()
+        setSearchParams({page: String(newPage)})
         //
     }
 
@@ -85,9 +85,9 @@ const HW15 = () => {
         // setPage(1) // при сортировке сбрасывать на 1 страницу
         setPage(1)
         // sendQuery(
-        sendQuery({...searchParams, sort: newSort, page: 1})
+        sendQuery({page, count, sort: newSort})
         // setSearchParams(
-        setSearchParams()
+        setSearchParams({page: String(page)})
         //
     }
 

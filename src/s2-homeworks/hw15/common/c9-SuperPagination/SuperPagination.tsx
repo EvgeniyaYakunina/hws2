@@ -26,7 +26,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
     const onChangeSelect = (event: any) => {
         // пишет студент
-        onChange(page, (Number(event.currentTarget.value)))
+        onChange(page, +event.currentTarget.value)
     }
 
 
